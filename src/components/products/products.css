@@ -1,0 +1,44 @@
+.division{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.division hr{
+    max-width: 360px;
+    width: 100%;
+    border-color: #DEDEDE;
+}
+
+.division h1{
+    color: #F71963;
+    font-size: 30px;
+}
+
+.filter-button{
+    width: calc(100% / 6);
+    font-size: 16px;
+    color: #3B3B3B;
+    text-transform: uppercase;
+    background-color: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    padding:12PX 0;
+    cursor: pointer;
+}
+
+.filter-button:focus{
+    font-weight: bold;
+    color: #F71963;
+}
+
+
+
+
+
+
+
+
+
+
+
+

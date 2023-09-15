@@ -1,0 +1,64 @@
+.partners-group{
+    width: 100%;
+    display: flex;
+    justify-content:  space-between;
+    padding-bottom: 60px;
+}
+
+.partner{
+    width: 575px;
+    min-height: 350px;
+    background-image: url(../../assets/parceiros.jpg);
+    padding: 115px 40px 40px 40px;
+}
+
+.partner h1, .partner-product h1{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.partner p, .partner-product p{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    width: 181px;
+    margin-bottom: 32px;
+}
+
+.partner a,.partner-product a{
+    text-align: center;
+    color: white;
+    padding: 12px 0;
+    display: block;
+    text-decoration: none;
+    background-color: #F71963;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    width: 131px;
+}
+
+.producs-division h3{
+    text-align: center;
+    font-size: 15px;
+}
+
+.partners-product-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 88px;
+    padding-bottom: 78px;
+}
+
+.partner-product{
+    border-radius: 10px;
+    width: 575px;
+    min-height: 284px;
+    background-image: url(../../assets/parceiros.jpg);
+    padding: 48px 40px 40px 40px;
+}
+
+
+

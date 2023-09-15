@@ -1,0 +1,36 @@
+.welcome{
+    background-image:url('../../assets/banner.jpg') ;
+    width: 100%;
+    height: 390px;
+    padding-top: 52px;
+}
+
+.text-banner{
+    width: 822px;
+    color: white;
+}
+
+.text-banner h1{
+   font-size: 48px;
+   font-weight: 600;
+}
+
+.text-banner h2{
+   font-size: 36px;
+   font-weight: 600;
+}
+
+.link-button{
+    margin-top: 35px;
+    background-color: #F71963;
+    height: 60px;
+    width: 227px;
+    display: block;
+    padding: 17px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}

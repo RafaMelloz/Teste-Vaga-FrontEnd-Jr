@@ -1,0 +1,14 @@
+
+.brand-card{
+    width: 211px!important;
+    height: 211px;
+    border-radius: 50%;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.13);
+    display: flex!important;
+    justify-content: center;
+    align-items: center
+}
+
+.group-brands .slick-list{
+    padding-left: 15px;
+}

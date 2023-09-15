@@ -1,0 +1,144 @@
+footer{
+    width: 100%;
+    background-color: #2A2A2A;
+    min-height: 395px;
+}
+
+.flex-first-footer{
+    padding: 32px 0; 
+    display: flex;
+    justify-content: space-between;
+}
+.group-links{
+    width: 100%;
+    max-width: 634px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col{
+    max-width: 149px;
+}
+
+.col:nth-of-type(3){
+    max-width: 192px;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 35px;
+grid-row-gap: 25px;
+}
+
+.title-col{
+    text-transform: uppercase;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom:24px ;
+}
+
+.group-links ul{
+    list-style-type: none;
+}
+.group-links ul li{
+    padding: 6px 0;
+}
+.group-links ul li a{
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-decoration: none;
+}
+.col-icons{
+    padding-top: 74px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/*card*/
+.box-news{
+    background-color: white;
+    width:380px;
+    min-height: 260px ;
+    border-radius: 10px;
+    padding: 40px;
+}
+.box-news h5{
+    font-weight: 300;
+    color: #3F3F40;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 0.9;
+}
+.box-news h4{
+    font-weight: 700;
+    color: #3F3F40;
+    font-size: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.box-news p{
+    margin: 15px 0 31px 0;
+    font-weight: 300;
+    color: #3F3F40;
+    font-size: 12px;
+    text-align: center;
+}
+.box-news p{
+    margin: 15px 0 31px 0;
+    font-weight: 300;
+    color: #3F3F40;
+    font-size: 12px;
+    text-align: center;
+}
+.group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.group input[type=email]{
+    border-radius: 4px;
+    width: 100%;
+    max-width: 230px;
+    height: 45px;
+    padding: 0px 25px;
+    border: 1px solid #2A2A2A;
+}
+.group input[type=email]::placeholder{
+    color: #C0C0C0;
+}
+.group input[type=submit]{
+    width: 62px;
+    height: 45px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #F71963;
+    border: none;
+}
+/*/////////////////////////////////*/
+
+.flex-second-footer{
+    padding: 22px 0 0 0 ; 
+    display: flex;
+    justify-content: space-between;
+}
+.copy{
+    font-size: 10px;
+    color: #FFFFFF;
+    font-weight: 400;
+    max-width: 698px;
+    width: 100%;
+}
+.group-icons img:nth-of-type(2){
+    margin-left: 32px;
+}
