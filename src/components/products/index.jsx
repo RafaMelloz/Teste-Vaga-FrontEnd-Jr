@@ -8,16 +8,11 @@ import Carousel from "../carrosel";
 
 export class Products extends Component{
     
-
-
-    
-
     render(){
 
         return(
     
             <section className="container">
-
                 <CardFilters/>
                 
                 <div className="division">

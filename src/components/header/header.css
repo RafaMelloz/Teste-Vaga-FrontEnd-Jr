@@ -16,7 +16,7 @@
     margin-left: 9px;
 }
 .single-publi b{
-    color: #F71963;
+    color: var(--mainColor);
 }
 
 
@@ -63,7 +63,7 @@
     color: #9F9F9F;
 }
 .filters-links ul li:nth-of-type(6) a{
-    color: #F71963;
+    color: var(--mainColor);
 }
 
 .filters-links ul li a img{

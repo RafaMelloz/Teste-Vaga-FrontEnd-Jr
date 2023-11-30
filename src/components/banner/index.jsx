@@ -11,7 +11,7 @@ export class Banner extends Component{
                         <h2>50% Off nos produtos</h2>
                     </div>
 
-                    <a href="#" className="link-button">Ver produto</a>
+                    <a href="#" className="link-button">Ver produtos</a>
                 </div>
             </section>
         )

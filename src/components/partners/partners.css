@@ -2,63 +2,72 @@
     width: 100%;
     display: flex;
     justify-content:  space-between;
-    padding-bottom: 60px;
+    padding-bottom: 6rem;
 }
 
 .partner{
-    width: 575px;
-    min-height: 350px;
+    width: 57.5rem;
+    min-height: 35rem;
     background-image: url(../../assets/parceiros.jpg);
-    padding: 115px 40px 40px 40px;
+    padding: 11.5rem 4rem 4rem 4rem;
+    background-size: 100% 100%;
+    border-radius: 2rem;
 }
 
-.partner h1, .partner-product h1{
+.partner h1{
     color: white;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: bold;
 }
 
-.partner p, .partner-product p{
+.partner p{
     color: white;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
-    width: 181px;
-    margin-bottom: 32px;
+    width: 18rem;
+    margin-bottom: 3.2rem;
 }
 
-.partner a,.partner-product a{
+.partner a{
     text-align: center;
     color: white;
-    padding: 12px 0;
+    padding: 1.2rem 0;
     display: block;
     text-decoration: none;
-    background-color: #F71963;
-    border-radius: 10px;
-    font-size: 16px;
+    background-color: var(--mainColor);
+    border-radius: 1rem;
+    font-size: 1.6rem;
     font-weight: bolder;
-    width: 131px;
-}
-
-.producs-division h3{
-    text-align: center;
-    font-size: 15px;
-}
-
-.partners-product-group{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 88px;
-    padding-bottom: 78px;
-}
-
-.partner-product{
-    border-radius: 10px;
-    width: 575px;
-    min-height: 284px;
-    background-image: url(../../assets/parceiros.jpg);
-    padding: 48px 40px 40px 40px;
+    width: 13rem;
 }
 
 
 
+@media screen and (max-width:1170px) {
+    .partner{
+        width: 45%;
+        min-width: 33rem;
+    }
+
+    .partners-group{
+        justify-content: space-around
+    }
+}
+
+
+@media screen and (max-width:820px){
+    .partner{
+        width: 75%;
+        margin-bottom: 2rem;
+    }
+
+    .partner:nth-of-type(1){
+        margin-bottom: 2rem;
+    }
+
+    .partners-group{
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 4rem;
+    }
+}

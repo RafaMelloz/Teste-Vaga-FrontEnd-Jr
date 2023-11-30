@@ -1,36 +1,47 @@
-.division{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly
-}
 
-.division hr{
-    max-width: 360px;
+.group-buttons{
     width: 100%;
-    border-color: #DEDEDE;
-}
-
-.division h1{
-    color: #F71963;
-    font-size: 30px;
 }
 
 .filter-button{
     width: calc(100% / 6);
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #3B3B3B;
     text-transform: uppercase;
     background-color: #FFFFFF;
     border: 1px solid #BDBDBD;
-    padding:12PX 0;
+    padding:1.2rem 0;
     cursor: pointer;
 }
 
 .filter-button:focus{
     font-weight: bold;
-    color: #F71963;
+    color: var(--mainColor);
 }
 
+.group-buttons::-webkit-scrollbar{
+    height: 0.5em;
+}
+
+.group-buttons::-webkit-scrollbar-track-piece{
+    background-color: #d1d1d1;
+}
+
+@media screen and (max-width:768px){
+    .group-buttons{
+        width: 87%;
+        margin: 0 auto;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+
+    .filter-button{
+        width: 12.5rem;
+        display: inline-block;
+    
+    }
+
+}
 
 
 

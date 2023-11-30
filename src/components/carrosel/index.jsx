@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import "./carrosel.css"
-import "./modal.css";
+
+//carrossel e modal
 import ReactModal from 'react-modal';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+
+//css
+import "./carrossel.css"
+import "./modal.css";
+
+// Import Swiper styles
+import 'swiper/css';
 
 const Carousel = () => {
 
@@ -13,13 +19,20 @@ const Carousel = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     useEffect(() => {
-        fetch('https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json')
-            .then(response => response.json())
-            .then(data => setProducts(data.products))
+        fetch('./products.json', {
+            headers: {
+                Accept: "application/json"
+            }
+        })
+            .then(res => res.json())
+
+
+            .then(res => setProducts(res.products))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
-    const formatCurrency = (value) => { 
+
+    const formatCurrency = (value) => {
         return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     };
 
@@ -33,70 +46,60 @@ const Carousel = () => {
         setModalIsOpen(false);
     }
 
-    const settings = {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: false,
-        arrows: false, // Remova as setas de navegação
-        dots: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    };
 
     return (
         <div className='cards-group'>
-            <Slider {...settings}>
+
+            <Swiper
+                spaceBetween={0}
+                slidesPerView={4}
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 40,
+                    },
+                    1220: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    },
+                }}
+            >
+
                 {products.map(product => (
-                    <div className="card-product" key={product.id}>
-                        <img src={product.photo} alt={product.productName} />
-                        
-                        <p className='description'>{product.descriptionShort}</p>
+                    <SwiperSlide key={product.id}>
+                        <div className="card-product" key={product.id}>
+                            <img src={product.photo} alt={product.productName} key={product.id} />
 
-                        <h5 className='price-offer'>R$ 160.000,00</h5>
-                        <h4>{formatCurrency(product.price)}</h4>
+                            <p className='description' key={product.id}>{product.descriptionShort}</p>
 
-                        <span>ou 2x de R$ 49,95 sem juros</span><br/>
-                        <span>Frete gratis</span>
+                            <h5 className='price-offer'>R$ 160.000,00</h5>
+                            <h4>{formatCurrency(product.price)}</h4>
 
+                            <span>ou 2x de R$ 49,95 sem juros</span><br />
+                            <span>Frete gratis</span>
 
-
-                        <button className="buy-btn" onClick={() => openModal(product)}>COMPRAR</button>
-                    </div>
+                            <button className="buy-btn" onClick={() => openModal(product)}>COMPRAR</button>
+                        </div>
+                    </SwiperSlide>
                 ))}
-            </Slider>
+            </Swiper>
 
-            <ReactModal isOpen={modalIsOpen}
+
+            <ReactModal
+                isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 contentLabel="Detalhes do Produto">
 
                 {selectedProduct && (
-
                     <div>
                         {<button onClick={closeModal} className='btn-close'>X</button>}
                         <div className='flex-modal'>
 
-                            <img src={selectedProduct.photo} alt={selectedProduct.productName} />
+                            <img className='imgModal' src={selectedProduct.photo} alt={selectedProduct.productName} />
 
                             <div className='group-content'>
                                 <h5 className='prod-name'>{selectedProduct.productName}</h5>
@@ -115,16 +118,11 @@ const Carousel = () => {
 
                                 <button className='buy-btn'>COMPRAR</button>
                             </div>
-
-                           
                         </div>
                     </div>
-                    
                 )}
             </ReactModal>
         </div>
-
-        
     );
 };
 
