@@ -1,8 +1,7 @@
-import { Component } from "react";
 import "./banner.css";
 
-export class Banner extends Component{
-    render(){
+export const Banner = () => {
+   
         return(
             <section className="welcome">
                 <div className="container">
@@ -15,5 +14,5 @@ export class Banner extends Component{
                 </div>
             </section>
         )
-    }
+    
 }

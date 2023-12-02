@@ -1,4 +1,3 @@
-import { Component } from "react";
 import "./header.css";
 
 
@@ -18,80 +17,79 @@ import searchIcon from "../../assets/icons/MagnifyingGlass.png";
 import crown from "../../assets/icons/CrownSimple.jpg";
 
 
-export class Header extends Component{
-    render() {
+export const Header = () => {
 
-        return (
-   
-                
-            <header className="container">
-                <div className="publi">
-                    <div className="single-publi">
-                        <img src={shield} alt="escudo"/>
-                        <span>Compra <b>100% segura</b></span>
-                    </div>
+    return (
 
-                    <div className="single-publi">
-                        <img src={truck} alt="escudo"/>
-                        <span><b>Frete grátis</b> acima de R$ 200</span>
-                    </div>
 
-                    <div className="single-publi">
-                        <img src={card} alt="escudo"/>
-                        <span><b>Parcele</b> suas compras</span>
-                    </div>
+        <header className="container">
+            <div className="publi">
+                <div className="single-publi">
+                    <img src={shield} alt="escudo" />
+                    <span>Compra <b>100% segura</b></span>
                 </div>
 
-                <nav className="nav-bar">
-                    <img src={logo} className="logo" alt="logo" />
-
-                    
-                    <div className="group-input">
-                        <input className="input-search" type="text" placeholder="O que você está buscando?"/>
-                        <img src={searchIcon} alt="pesquisar" />
-                    </div>
-
-                    <ul className="menu">
-                        <li>
-                            <a href="#">
-                                <img src={group} alt="grupo" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src={heart} alt="favoritos" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src={conta} alt="conta" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src={shoppingcar} alt="carrinho de compras" />
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div className="filters-links ">
-                    <ul>
-                        <li><a href="">TODAS CATEGORIAS</a></li>
-                        <li><a href="">SUPERMERCADO</a></li>
-                        <li><a href="">LIVROS</a></li>
-                        <li><a href="">MODA</a></li>
-                        <li><a href="">LANÇAMENTOS</a></li>
-                        <li><a href="">OFERTAS DO DIA</a></li>
-                        <li><a href=""><img src={crown}/>ASSINATURA</a></li>
-
-                    </ul>
+                <div className="single-publi">
+                    <img src={truck} alt="escudo" />
+                    <span><b>Frete grátis</b> acima de R$ 200</span>
                 </div>
 
-            </header>
+                <div className="single-publi">
+                    <img src={card} alt="escudo" />
+                    <span><b>Parcele</b> suas compras</span>
+                </div>
+            </div>
 
-            
-        );
+            <nav className="nav-bar">
+                <img src={logo} className="logo" alt="logo" />
 
-    };
+
+                <div className="group-input">
+                    <input className="input-search" type="text" placeholder="O que você está buscando?" />
+                    <img src={searchIcon} alt="pesquisar" />
+                </div>
+
+                <ul className="menu">
+                    <li>
+                        <a href="#">
+                            <img src={group} alt="grupo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src={heart} alt="favoritos" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src={conta} alt="conta" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src={shoppingcar} alt="carrinho de compras" />
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div className="filters-links ">
+                <ul>
+                    <li><a href="">TODAS CATEGORIAS</a></li>
+                    <li><a href="">SUPERMERCADO</a></li>
+                    <li><a href="">LIVROS</a></li>
+                    <li><a href="">MODA</a></li>
+                    <li><a href="">LANÇAMENTOS</a></li>
+                    <li><a href="">OFERTAS DO DIA</a></li>
+                    <li><a href=""><img src={crown} />ASSINATURA</a></li>
+
+                </ul>
+            </div>
+
+        </header>
+
+
+    );
+
+
 }

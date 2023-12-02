@@ -8,11 +8,9 @@ import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 //css
 import "./carrossel.css"
 import "./modal.css";
-
-// Import Swiper styles
 import 'swiper/css';
 
-const Carousel = () => {
+export const Carousel = () => {
 
     const [products, setProducts] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -25,8 +23,6 @@ const Carousel = () => {
             }
         })
             .then(res => res.json())
-
-
             .then(res => setProducts(res.products))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
@@ -126,4 +122,3 @@ const Carousel = () => {
     );
 };
 
-export default Carousel;
