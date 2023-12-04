@@ -1,20 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 //carrossel e modal
 import ReactModal from 'react-modal';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
 //css
 import "./carrossel.css"
 import "./modal.css";
 import 'swiper/css';
 
+import { CarShopContext } from '../../context/carShopContext';
+
+
 export const Carousel = () => {
 
     const [products, setProducts] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [counterProduct, setCounterProduct] = useState(1);
+
+    const carContext = useContext(CarShopContext);
+    const { carState, setCarState } = carContext;
 
     useEffect(() => {
         fetch('./products.json', {
@@ -33,6 +39,7 @@ export const Carousel = () => {
     };
 
     const openModal = (product) => {
+        setCounterProduct(1)
         setSelectedProduct(product);
         setModalIsOpen(true);
     };
@@ -41,6 +48,24 @@ export const Carousel = () => {
         setSelectedProduct(null);
         setModalIsOpen(false);
     }
+
+    const increaseProduct = () =>{
+        setCounterProduct( counterProduct + 1)
+    }
+
+    const decreaseProduct = () => {
+        if (counterProduct > 1) {
+            setCounterProduct(counterProduct - 1) 
+        }
+    }
+
+    const addCar = (selectedProduct) =>{
+        setCarState([...carState, {...selectedProduct, quantidade: counterProduct}])
+        closeModal()
+    }
+
+
+    
 
 
     return (
@@ -107,12 +132,12 @@ export const Carousel = () => {
                                 <p className='more-details'>Veja mais detalhes do produto {'>'}</p>
 
                                 <div className='counter-button'>
-                                    <button>-</button>
-                                    <span>1</span>
-                                    <button>+</button>
+                                    <button onClick={decreaseProduct}>-</button>
+                                    <span>{counterProduct}</span>
+                                    <button onClick={increaseProduct}>+</button>
                                 </div>
 
-                                <button className='buy-btn'>COMPRAR</button>
+                                <button onClick={() => addCar(selectedProduct)} className='buy-btn'>COMPRAR</button>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,113 @@
+.circle-car{
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--mainColor);
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: sobeDesce 3s infinite ;
+    cursor: pointer;
+    box-shadow: 2px 6px 5px 0px #474747;
+}
+.circle-car div{
+    position: relative;
+    right: 0;
+}
+.circle-car span{
+    font-size: 1.5rem;
+    position: absolute;
+    right: -0.7rem;
+    top: -1rem;
+    background-color: black;
+    color: white;
+    width: 1.9rem;
+    text-align: center;
+    border-radius: 50%;
+    
+}
+.circle-car svg{
+    width: 3.8rem;
+    height: 3.8rem;
+    color: white;
+}
+
+
+
+.opened-car{
+    box-shadow: 2px 6px 5px 0px #474747;
+    border: 0.1rem solid black;
+    width: 30rem;
+    height: 35rem;
+    background-color: white;
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    z-index: 5;
+    border-radius: 2rem;
+}
+.top-car{
+    font-size: 3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 1rem;
+}
+
+.top-car svg{
+    cursor: pointer;
+}
+
+.content{
+    height: 70%;
+    min-height: 25.2rem;
+    overflow-y: auto;
+}
+
+.prod-car{
+    padding: 1rem;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+}
+
+.prod-car div span{
+    font-size: 1.4rem;
+}
+
+.bottom-car{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-car button{
+    border: none;
+    background: var(--mainColor);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+@keyframes sobeDesce{
+    0% {
+        bottom: 5rem;
+    }
+
+    
+
+    50%{
+        bottom: 6.5rem;
+    }
+
+    
+
+    100%{
+        bottom: 5rem;
+    }
+}
