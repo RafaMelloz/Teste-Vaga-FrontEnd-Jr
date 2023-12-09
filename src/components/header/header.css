@@ -111,6 +111,7 @@
         margin: 0 auto;
         overflow-x: scroll;
         white-space: nowrap;
+        justify-content: normal
     } 
 
     .filters-links ul::-webkit-scrollbar{
@@ -118,6 +119,6 @@
     } 
 
     .filters-links ul li {
-    padding: 11px 1.5rem;
+    padding-right: 2rem;
 }
 }
