@@ -182,18 +182,8 @@
 
 @media screen and (max-width:595px) {
     .single-publi {
-        align-items: center;
-        margin: 0 1rem
+       display: none;
             
     }
-    .single-publi span{
-        text-align: center;
-        margin: 0;
-    }
-}
 
-@media screen and (max-width:490px){
-    .logo{
-        max-width: 10rem;
-    }
 }
