@@ -17,7 +17,14 @@ import searchIcon from "../../assets/icons/MagnifyingGlass.png";
 import crown from "../../assets/icons/CrownSimple.jpg";
 
 
+import { IoMenu } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
+
+import { useState } from "react";
+
 export const Header = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false)
 
     return (
 
@@ -49,6 +56,17 @@ export const Header = () => {
                     <img src={searchIcon} alt="pesquisar" />
                 </div>
 
+
+                <h1 className="icon-menu">
+                    {menuOpen === false ?
+                        <IoMenu onClick={()=> setMenuOpen(true)} />
+                        :
+                        <IoClose className="close-menu" onClick = { ()=> setMenuOpen(false)} />
+                    }
+                </h1>
+
+
+
                 <ul className="menu">
                     <li>
                         <a href="#">
@@ -71,6 +89,8 @@ export const Header = () => {
                         </a>
                     </li>
                 </ul>
+
+                
             </nav>
 
             <div className="filters-links ">
@@ -86,7 +106,46 @@ export const Header = () => {
                 </ul>
             </div>
 
+
+
+            {menuOpen === true ?
+                <div className="menu-mobile">
+
+                    <img src={logo} className="logo" alt="logo" />
+
+                    <ul className="ul-mobile">
+                        <li>
+                            <a href="#">
+                                <img src={group} alt="grupo" />
+                                <span>Group</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src={heart} alt="favoritos" />
+                                <span>Favoritos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src={conta} alt="conta" />
+                                <span>Conta</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src={shoppingcar} alt="carrinho de compras" />
+                                <span>Carrinho de compras</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                :
+                null
+            }
         </header>
+
+
 
 
     );

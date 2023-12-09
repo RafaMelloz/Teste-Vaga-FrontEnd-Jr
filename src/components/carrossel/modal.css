@@ -1,7 +1,7 @@
 
 .ReactModal__Overlay {
   background-color: #000000bf!important; 
-  z-index: 9;
+  z-index: 21;
 }
 
 .ReactModal__Content {

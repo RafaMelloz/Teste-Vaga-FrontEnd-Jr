@@ -28,6 +28,8 @@
 }
 
 .logo{
+    width: 100%;
+    max-width: 13.9rem;
     margin: 7px 0 12px 0;
 }
 
@@ -44,6 +46,7 @@
 .menu li:nth-of-type(4){
     padding-right:0px ;
 }
+
 
 .filters-links {
     width: 100%;
@@ -74,15 +77,11 @@
 }
 
 
-
-
-
-
-
 .group-input{
     max-width: 657px;
     width: 100%;
     position: relative;
+    margin: 0 1rem;
 }
 .input-search{
     width: 100%;
@@ -100,13 +99,71 @@
 }
 .group-input img{
     background-color: #F6F5F2;
-    top: 10px;
-    right: 24px;
+    top: 1rem;
+    right: 1rem;
     position: absolute;      
 }
 
 
+
+
+
+
+.icon-menu{
+    font-size: 3.6rem;
+    display: none;
+    color: #9f9f9f;
+    cursor: pointer;
+    z-index: 21;
+}
+.close-menu{
+    position: fixed;
+    right: 3rem;
+    top: 5rem;
+}
+
+.menu-mobile{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu-mobile .ul-mobile{
+    list-style-type: none;
+    margin-top: 2rem;
+}
+
+.menu-mobile .ul-mobile li a{
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+
+.menu-mobile .ul-mobile li a span{
+    padding-left:  2rem;
+}
+
 @media screen and (max-width:768px) {
+    
+    .menu{
+        display: none;
+    }
+    
+    .icon-menu{
+        font-size: 3.6rem;
+        display: flex;
+    }
+    
     .filters-links ul{
         margin: 0 auto;
         overflow-x: scroll;
@@ -121,4 +178,10 @@
     .filters-links ul li {
     padding-right: 2rem;
 }
+}
+
+@media screen and (max-width:490px){
+    .logo{
+        max-width: 10rem;
+    }
 }
