@@ -111,7 +111,7 @@ export const Header = () => {
             {menuOpen === true ?
                 <div className="menu-mobile">
 
-                    <img src={logo} className="logo" alt="logo" />
+                    <img src={logo} className="logo-mobile" alt="logo" />
 
                     <ul className="ul-mobile">
                         <li>
