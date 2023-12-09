@@ -41,7 +41,11 @@
     width: 13rem;
 }
 
-
+@media screen and (max-width:1215px){
+    .swiper-slide .brand-card{
+        margin: 0 auto;
+    }
+}
 
 @media screen and (max-width:1170px) {
     .partner{
@@ -53,6 +57,7 @@
         justify-content: space-around
     }
 }
+
 
 
 @media screen and (max-width:820px){

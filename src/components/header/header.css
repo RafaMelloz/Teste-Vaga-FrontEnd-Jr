@@ -45,7 +45,9 @@
     padding-right:0px ;
 }
 
-
+.filters-links {
+    width: 100%;
+}
 
 .filters-links ul{
     width: 100%;
@@ -101,4 +103,21 @@
     top: 10px;
     right: 24px;
     position: absolute;      
+}
+
+
+@media screen and (max-width:768px) {
+    .filters-links ul{
+        margin: 0 auto;
+        overflow-x: scroll;
+        white-space: nowrap;
+    } 
+
+    .filters-links ul::-webkit-scrollbar{
+        height: 0.3rem;
+    } 
+
+    .filters-links ul li {
+    padding: 11px 1.5rem;
+}
 }
