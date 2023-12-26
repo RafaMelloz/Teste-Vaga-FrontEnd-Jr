@@ -12,12 +12,13 @@ import 'swiper/css';
 import { CarShopContext } from '../../context/carShopContext';
 
 
-export const Carousel = () => {
+export const Carousel = (props) => {
 
     const [products, setProducts] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [counterProduct, setCounterProduct] = useState(1);
+    const [filterStatus, setFilterStatus] = useState(1)
 
     const carContext = useContext(CarShopContext);
     const { carState, setCarState } = carContext;
@@ -64,12 +65,15 @@ export const Carousel = () => {
         closeModal()
     }
 
-
+    useEffect(()=>{
+        setFilterStatus(props.filter)
+    })
     
 
 
     return (
         <div className='cards-group'>
+
 
             <Swiper
                 spaceBetween={0}
@@ -90,23 +94,48 @@ export const Carousel = () => {
                 }}
             >
 
-                {products.map(product => (
-                    <SwiperSlide key={product.id}>
-                        <div className="card-product" key={product.id}>
-                            <img src={product.photo} alt={product.productName} key={product.id} />
+                {filterStatus != 0 ?
+                    products
+                        .filter(filtrados => Number(filtrados.type) === Number(filterStatus))
+                        .map(product => (
+                            <SwiperSlide key={product.id}>
 
-                            <p className='description' key={product.id}>{product.descriptionShort}</p>
 
-                            <h5 className='price-offer'>R$ 160.000,00</h5>
-                            <h4>{formatCurrency(product.price)}</h4>
+                                <div className="card-product">
+                                    <img src={product.photo} alt={product.productName} key={product.id} />
+                                    <p className='description' key={product.id}>{product.descriptionShort}</p>
+                                    <h5 className='price-offer'>R$ 160.000,00</h5>
+                                    <h4>{formatCurrency(product.price)}</h4>
+                                    <span>ou 2x de R$ 49,95 sem juros</span><br />
+                                    <span>Frete gratis</span>
+                                    <button className="buy-btn" onClick={() => openModal(product)}>COMPRAR</button>
+                                </div>
 
-                            <span>ou 2x de R$ 49,95 sem juros</span><br />
-                            <span>Frete gratis</span>
 
-                            <button className="buy-btn" onClick={() => openModal(product)}>COMPRAR</button>
-                        </div>
-                    </SwiperSlide>
-                ))}
+
+                            </SwiperSlide>
+                        ))
+                :
+                    products
+                        .map(product => (
+                            <SwiperSlide key={product.id}>
+
+
+                                <div className="card-product">
+                                    <img src={product.photo} alt={product.productName} key={product.id} />
+                                    <p className='description' key={product.id}>{product.descriptionShort}</p>
+                                    <h5 className='price-offer'>R$ 160.000,00</h5>
+                                    <h4>{formatCurrency(product.price)}</h4>
+                                    <span>ou 2x de R$ 49,95 sem juros</span><br />
+                                    <span>Frete gratis</span>
+                                    <button className="buy-btn" onClick={() => openModal(product)}>COMPRAR</button>
+                                </div>
+
+
+
+                            </SwiperSlide>
+                        ))
+                }
             </Swiper>
 
 
@@ -143,6 +172,8 @@ export const Carousel = () => {
                     </div>
                 )}
             </ReactModal>
+
+
         </div>
     );
 };

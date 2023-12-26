@@ -4,61 +4,157 @@
             "productName": "Iphone 11 PRO MAX 1",
             "descriptionShort": "Iphone 11 PRO MAX BRANCO 1",
             "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-            "price": 15000
+            "price": 15000,
+            "type": 1
         },
         {
             "productName": "IPHONE 13 MINI 1",
             "descriptionShort": "IPHONE 13 MINI 1",
             "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-            "price": 9000
+            "price": 9000,
+            "type": 1
         },
         {
             "productName": "Iphone 11 PRO MAX 2",
             "descriptionShort": "Iphone 11 PRO MAX BRANCO 2",
             "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-            "price": 14990
+            "price": 14990,
+            "type": 1
         },
         {
             "productName": "IPHONE 13 MINI 2",
             "descriptionShort": "IPHONE 13 MINI 2",
             "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-            "price": 12000
+            "price": 12000,
+            "type": 1
         },
         {
             "productName": "Iphone 11 PRO MAX  3",
             "descriptionShort": "Iphone 11 PRO MAX BRANCO 3",
             "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-            "price": 4550
+            "price": 4550,
+            "type": 1
         },
         {
             "productName": "IPHONE 13 MINI 3",
             "descriptionShort": "IPHONE 13 MINI 3",
             "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-            "price": 38000
+            "price": 38000,
+            "type": 1
+        },
+    
+        {
+            "productName": "Tablet",
+            "descriptionShort": "Tablet",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-windows-tablettablettablet-computertouchscreen-displayrechargeable-batterelectronicswindows-1701528392760xuswz.png",
+            "price": 1000,
+            "type": 3
         },
         {
-            "productName": "Iphone 11 PRO MAX 4",
-            "descriptionShort": "Iphone 11 PRO MAX BRANCO 4",
-            "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-            "price": 42000
+            "productName": "Tablet",
+            "descriptionShort": "Tablet",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-windows-tablettablettablet-computertouchscreen-displayrechargeable-batterelectronicswindows-1701528392760xuswz.png",
+            "price": 1000,
+            "type": 3
         },
         {
-            "productName": "IPHONE 13 MINI 4",
-            "descriptionShort": "IPHONE 13 MINI 4",
-            "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-            "price": 520
+            "productName": "Tablet",
+            "descriptionShort": "Tablet",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-windows-tablettablettablet-computertouchscreen-displayrechargeable-batterelectronicswindows-1701528392760xuswz.png",
+            "price": 1000,
+            "type": 3
         },
         {
-            "productName": "Iphone 11 PRO MAX 5",
-            "descriptionShort": "Iphone 11 PRO MAX BRANCO 5",
-            "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-            "price": 149990
+            "productName": "Tablet",
+            "descriptionShort": "Tablet",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-windows-tablettablettablet-computertouchscreen-displayrechargeable-batterelectronicswindows-1701528392760xuswz.png",
+            "price": 1000,
+            "type": 3
         },
         {
-            "productName": "IPHONE 13 MINI 5",
-            "descriptionShort": "IPHONE 13 MINI 5",
-            "photo": "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-            "price": 100000
+            "productName": "Macbook",
+            "descriptionShort": "Macbook",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-macbookmacbooknotebookcomputersapple-inmacbook-familyapple-laptops-1701528361451bs1cs.png",
+            "price": 1000,
+            "type": 4
+        },
+        {
+            "productName": "Macbook",
+            "descriptionShort": "Macbook",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-macbookmacbooknotebookcomputersapple-inmacbook-familyapple-laptops-1701528361451bs1cs.png",
+            "price": 1000,
+            "type": 4
+        },
+        {
+            "productName": "Macbook",
+            "descriptionShort": "Macbook",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-macbookmacbooknotebookcomputersapple-inmacbook-familyapple-laptops-1701528361451bs1cs.png",
+            "price": 1000,
+            "type": 4
+        },
+        {
+            "productName": "Macbook",
+            "descriptionShort": "Macbook",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-macbookmacbooknotebookcomputersapple-inmacbook-familyapple-laptops-1701528361451bs1cs.png",
+            "price": 1000,
+            "type": 4
+        },
+        {
+            "productName": "Tv",
+            "descriptionShort": "Tv",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-lcd-televisiontvtelecommunicationmonochrometelevisionoldlcd-televisionled-1421526536303uy7b3.png",
+            "price": 1000,
+            "type": 5
+        },
+        {
+            "productName": "Tv",
+            "descriptionShort": "Tv",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-lcd-televisiontvtelecommunicationmonochrometelevisionoldlcd-televisionled-1421526536303uy7b3.png",
+            "price": 1000,
+            "type": 5
+        },
+        {
+            "productName": "Tv",
+            "descriptionShort": "Tv",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-lcd-televisiontvtelecommunicationmonochrometelevisionoldlcd-televisionled-1421526536303uy7b3.png",
+            "price": 1000,
+            "type": 5
+        },
+        {
+            "productName": "Tv",
+            "descriptionShort": "Tv",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-lcd-televisiontvtelecommunicationmonochrometelevisionoldlcd-televisionled-1421526536303uy7b3.png",
+            "price": 1000,
+            "type": 5
+        },
+        {
+            "productName": "Fone de ouvido",
+            "descriptionShort": "Fone de ouvido",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-earphoneelectronics-earphone-headphone-9415246694858vr1v.png",
+            "price": 1000,
+            "type": 2
+        },
+        {
+            "productName": "Fone de ouvido",
+            "descriptionShort": "Fone de ouvido",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-earphoneelectronics-earphone-headphone-9415246694858vr1v.png",
+            "price": 1000,
+            "type": 2
+        },
+        {
+            "productName": "Fone de ouvido",
+            "descriptionShort": "Fone de ouvido",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-earphoneelectronics-earphone-headphone-9415246694858vr1v.png",
+            "price": 1000,
+            "type": 2
+        },
+        {
+            "productName": "Fone de ouvido",
+            "descriptionShort": "Fone de ouvido",
+            "photo": "https://purepng.com/public/uploads/large/purepng.com-earphoneelectronics-earphone-headphone-9415246694858vr1v.png",
+            "price": 1000,
+            "type": 2
         }
+    
     ]
 }
