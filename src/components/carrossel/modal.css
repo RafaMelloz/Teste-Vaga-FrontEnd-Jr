@@ -85,6 +85,10 @@
     color: #707070;
 }
 
+.imgModal{
+    max-width: 24.7rem;
+}
+
 @media screen and (max-width:475px) {
     .imgModal{
         max-width: 16.8rem;

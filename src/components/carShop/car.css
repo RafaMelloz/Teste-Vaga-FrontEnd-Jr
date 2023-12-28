@@ -94,6 +94,10 @@
     font-weight: bold;
 }
 
+.desc-prod{
+    margin-left: 1rem;
+}
+
 @keyframes sobeDesce{
     0% {
         bottom: 5rem;

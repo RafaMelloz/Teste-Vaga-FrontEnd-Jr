@@ -42,7 +42,7 @@ export const CarShop = () =>{
                                 <div className="prod-car" key={product.id}>
                                     <img src={product.photo} alt={product.productName} />
 
-                                    <div>
+                                    <div className="desc-prod">
                                         <h2>{product.productName}</h2>
                                         <span>{formatCurrency(product.price * product.quantidade)} - Qnti: {product.quantidade}</span>
                                     </div>                                    
